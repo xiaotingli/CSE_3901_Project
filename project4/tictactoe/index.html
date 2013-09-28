@@ -17,36 +17,93 @@
     -->
     <style type="text/css">
       body {
-        font-size:150%;
       }
       table {
         font-size:inherit;
         float: left;
-        margin: 5px;
+        border-spacing: 0px;
+      }
+      tr td {
       }
       button {
+        width: 26px;
+        height: 26px;
       }
       p {
         margin: 5px;
+      }
+      #c00 {
+        border-top: none;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+      }
+      #c01 {
+        border-top: none;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+      }
+      #c02 {
+        border-top: none;
+        border-right: none;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+      }
+      #c10 {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: none;
+      }
+      #c11 {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+      }
+      #c12 {
+        border-top: 1px solid black;
+        border-right: none;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+      }
+      #c20 {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: none;
+        border-left: none;
+      }
+      #c21 {
+        border-top: 1px solid black;
+        border-right: 1px solid black;
+        border-bottom: none;
+        border-left: 1px solid black;
+      }
+      #c22 {
+        border-top: 1px solid black;
+        border-right: none;
+        border-bottom: none;
+        border-left: 1px solid black;
       }
     </style>
   </head>
   <body>
     <table>
       <tr>
-        <td id="c00"><button type="button" name="b00" id="b00">&nbsp;</button></td>
-        <td id="c01"><button type="button" name="b01" id="b01">&nbsp;</button></td>
-        <td id="c02"><button type="button" name="b02" id="b02">&nbsp;</button></td>
+        <td id="c00"><button type="button" name="b00" id="b00"></button></td>
+        <td id="c01"><button type="button" name="b01" id="b01"></button></td>
+        <td id="c02"><button type="button" name="b02" id="b02"></button></td>
       </tr>
       <tr>
-        <td id="c10"><button type="button" name="b10" id="b10">&nbsp;</button></td>
-        <td id="c11"><button type="button" name="b11" id="b11">&nbsp;</button></td>
-        <td id="c12"><button type="button" name="b12" id="b12">&nbsp;</button></td>
+        <td id="c10"><button type="button" name="b10" id="b10"></button></td>
+        <td id="c11"><button type="button" name="b11" id="b11"></button></td>
+        <td id="c12"><button type="button" name="b12" id="b12"></button></td>
       </tr>
       <tr>
-        <td id="c20"><button type="button" name="b20" id="b20">&nbsp;</button></td>
-        <td id="c21"><button type="button" name="b21" id="b21">&nbsp;</button></td>
-        <td id="c22"><button type="button" name="b22" id="b22">&nbsp;</button></td>
+        <td id="c20"><button type="button" name="b20" id="b20"></button></td>
+        <td id="c21"><button type="button" name="b21" id="b21"></button></td>
+        <td id="c22"><button type="button" name="b22" id="b22"></button></td>
       </tr>
     </table>
     <p class="turn" id="turn">Player #, it is your turn.</p>
