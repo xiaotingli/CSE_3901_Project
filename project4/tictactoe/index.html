@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Tic Tac Toe</title>
-        <!-- javascript goes here -->
-        <!-- useful javascript commands
+  <head>
+    <meta charset="utf-8" />
+    <title>Tic Tac Toe</title>
+    <!-- javascript goes here -->
+    <!-- useful javascript commands
 
-        cell = document.getElementById('c00');
-        cell.innerHTML = 'X';
-        cell.style.backgroundColor = 'gray';
+    cell = document.getElementById('c00');
+    cell.innerHTML = 'X';
+    cell.style.backgroundColor = 'gray';
 
-        -->
-        <style type="text/css">
-            body {
-                font-size:150%;
-                background-color:#ff0000;
-            }
-            table {
-                font-size:inherit;
-                background-color:green;
-            }
-            button {
-                background-color:blue;
-            }
-        </style>
-    </head>
-    <body>
-        <table border="solid">
-            <tr>
-                <td><button type="button" name="b00" id="c00">&nbsp;</button></td>
-                <td><button type="button" name="b01" id="c01">&nbsp;</button></td>
-                <td><button type="button" name="b02" id="c02">&nbsp;</button></td>
-            </tr>
-            <tr>
-                <td><button type="button" name="b10" id="c10">&nbsp;</button></td>
-                <td><button type="button" name="b11" id="c11">&nbsp;</button></td>
-                <td><button type="button" name="b12" id="c12">&nbsp;</button></td>
-            </tr>
-            <tr>
-                <td><button type="button" name="b20" id="c20">&nbsp;</button></td>
-                <td><button type="button" name="b21" id="c21">&nbsp;</button></td>
-                <td><button type="button" name="b22" id="c22">&nbsp;</button></td>
-            </tr>
-        </table>
-    </body>
+    turn = document.getElementById('turn');
+    turn.innerHTML = 'Player 1, it is your turn.';
+    turn.style.display = 'inline';
+
+    -->
+    <style type="text/css">
+      body {
+        font-size:150%;
+      }
+      table {
+        font-size:inherit;
+        float: left;
+        margin: 5px;
+      }
+      button {
+      }
+      p {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="c00"><button type="button" name="b00" id="b00">&nbsp;</button></td>
+        <td id="c01"><button type="button" name="b01" id="b01">&nbsp;</button></td>
+        <td id="c02"><button type="button" name="b02" id="b02">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td id="c10"><button type="button" name="b10" id="b10">&nbsp;</button></td>
+        <td id="c11"><button type="button" name="b11" id="b11">&nbsp;</button></td>
+        <td id="c12"><button type="button" name="b12" id="b12">&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td id="c20"><button type="button" name="b20" id="b20">&nbsp;</button></td>
+        <td id="c21"><button type="button" name="b21" id="b21">&nbsp;</button></td>
+        <td id="c22"><button type="button" name="b22" id="b22">&nbsp;</button></td>
+      </tr>
+    </table>
+    <p class="turn" id="turn">Player #, it is your turn.</p>
+  </body>
 </html>
