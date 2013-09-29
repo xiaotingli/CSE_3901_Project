@@ -11,52 +11,52 @@
 
 <BODY>
 
-<form>
+<form name="Calc">
 <table border=1>
 
-	<tr>
-		<td colspan = "5"><input type="text" name="TextWindow"></input></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="MC"></input></td>
-		<td><input type="button" value="MR"></input></td>
-		<td><input type="button" value="MS"></input></td>
-		<td><input type="button" value="M+"></input></td>
-		<td><input type="button" value="M-"></input></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="BACK"></input></td>
-		<td><input type="button" value="CE"></input></td>
-		<td><input type="button" value="C"></input></td>
-		<td><input type="button" value="+/-"></input></td>
-		<td><input type="button" value="sqrt"></input></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="7"></input></td>
-		<td><input type="button" value="8"></input></td>
-		<td><input type="button" value="8"></input></td>
-		<td><input type="button" value="/"></input></td>
-		<td><input type="button" value="%"></input></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="4"></input></td>
-		<td><input type="button" value="5"></input></td>
-		<td><input type="button" value="6"></input></td>
-		<td><input type="button" value="*"></input></td>
-		<td><input type="button" value="1/x"></input></td>
-	</tr>
-	<tr>
-		<td><input type="button" value="1"></input></td>
-		<td><input type="button" value="2"></input></td>
-		<td><input type="button" value="3"></input></td>
-		<td><input type="button" value="-"></input></td>
-		<td><input type="button" value="+"></input></td>
-	</tr>
-	<tr>
-		<td colspan="3"><input type="button" value="0"></input></td>
-		<td><input type="button" value="."></input></td>
-		<td colspan="2"><input type="button" value="="></input></td>
-	</tr>
+<tr>
+<td colspan = "5"><input type="text" name="TextWindow"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="MC"></input></td>
+<td><input type="button" value="MR"></input></td>
+<td><input type="button" value="MS"></input></td>
+<td><input type="button" value="M+"></input></td>
+<td><input type="button" value="M-"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="BACK"></input></td>
+<td><input type="button" value="CE"></input></td>
+<td><input type="button" value="C" onClick="document.Calc.TextWindow.value =''"></input></td>
+<td><input type="button" value="+/-"></input></td>
+<td><input type="button" value="sqrt"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="7" onClick="document.Calc.TextWindow.value +='7'"></input></td>
+<td><input type="button" value="8" onClick="document.Calc.TextWindow.value +='8'"></input></td>
+<td><input type="button" value="9" onClick="document.Calc.TextWindow.value +='9'"></input></td>
+<td><input type="button" value="/" onClick="document.Calc.TextWindow.value +='/'"></input></td>
+<td><input type="button" value="%"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="4" onClick="document.Calc.TextWindow.value +='4'"></input></td>
+<td><input type="button" value="5" onClick="document.Calc.TextWindow.value +='5'"></input></td>
+<td><input type="button" value="6" onClick="document.Calc.TextWindow.value +='6'"></input></td>
+<td><input type="button" value="*" onClick="document.Calc.TextWindow.value +='*'"></input></td>
+<td><input type="button" value="1/x"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="1" onClick="document.Calc.TextWindow.value +='1'"></input></td>
+<td><input type="button" value="2" onClick="document.Calc.TextWindow.value +='2'"></input></td>
+<td><input type="button" value="3" onClick="document.Calc.TextWindow.value +='3'"></input></td>
+<td><input type="button" value="-" onClick="document.Calc.TextWindow.value +='-'"></input></td>
+<td><input type="button" value="+" onClick="document.Calc.TextWindow.value +='+'"></input></td>
+</tr>
+<tr>
+<td colspan="3"><input type="button" value="0" onClick="document.Calc.TextWindow.value +='0'"></input></td>
+<td><input type="button" value="." onClick="document.Calc.TextWindow.value +='.'"></input></td>
+<td colspan="2"><input type="button" value="=" onClick="document.Calc.TextWindow.value = eval(Calc.TextWindow.value)"></input></td>
+</tr>
 
 </table>
 </form>
