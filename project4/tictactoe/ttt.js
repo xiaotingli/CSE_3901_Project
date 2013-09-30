@@ -1,6 +1,6 @@
 function changeBoard(node, player) {
-  var marker = null;
-  var color = null;
+  var marker = node.innerHTML;
+  var color = node.style.backgroundColor;
 
   if (player === 0) {
     marker = 'X';
