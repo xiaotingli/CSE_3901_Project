@@ -23,3 +23,19 @@ for (i = 0; i < 3; i++) {
   }
 }
 
+var player = 0
+var gameOver = false;
+while (gameOver === false) {
+  // switch players
+  player = (player + 1) % 2;
+
+  // output which person's turn it is
+  
+  if (player === 0) {
+    // make computer's move
+  } else if (player === 1) {
+    // wait for user's move
+  }
+
+  //test all winning cases
+}
