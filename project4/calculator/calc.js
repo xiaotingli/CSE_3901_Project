@@ -38,6 +38,12 @@ function windowAlter(val)
 	document.Calc.TextWindow.value +=val;
 }
 
+function del()
+{
+	var txtlength = String(document.Calc.TextWindow.value.length)
+	document.Calc.TextWindow.value = document.Calc.TextWindow.value.substring(0, (txtlength-1));
+}
+
 function sqrt()
 {
 	document.Calc.TextWindow.value = Math.sqrt(Number(eval(document.Calc.TextWindow.value)));
@@ -54,7 +60,7 @@ function mod()
 	document.Calc.TextWindow.value = (eval(document.Calc.TextWindow.value));	
 }
 
-function negative()
+function neg()
 {
 	document.Calc.TextWindow.value = -1 * (eval(document.Calc.TextWindow.value));
 }
