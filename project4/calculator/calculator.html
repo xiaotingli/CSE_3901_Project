@@ -14,53 +14,60 @@
 
 <form name="Calc">
 <table border=1>
-
-<tr>
-<td colspan = "5"><input type="s" name="TextWindow"></input></td>
-</tr>
-<tr>
-<td><input type="button" value="MC"></input></td>
-<td><input type="button" value="MR"></input></td>
-<td><input type="button" value="MS"></input></td>
-<td><input type="button" value="M+"></input></td>
-<td><input type="button" value="M-"></input></td>
-</tr>
-<tr>
-<td><input type="button" value="BACK"></input></td>
-<td><input type="button" value="CE"></input></td>
-<td><input type="button" value="C" onClick="document.Calc.TextWindow.value =''"></input></td>
-<td><input type="button" value="+/-"></input></td>
-<td><input type="button" value="sqrt" onClick="sqrt()"></input></td>
-</tr>
-<tr>
-<td><input type="button" value="7" onClick="windowAlter('7')"></input></td>
-<td><input type="button" value="8" onClick="windowAlter('8')"></input></td>
-<td><input type="button" value="9" onClick="windowAlter('9')"></input></td>
-<td><input type="button" value="/" onClick="windowAlter('/')"></input></td>
-<td><input type="button" value="%" onClick="mod()"></input></td>
-</tr>
-<tr>
-<td><input type="button" value="4" onClick="windowAlter('4')"></input></td>
-<td><input type="button" value="5" onClick="windowAlter('5')"></input></td>
-<td><input type="button" value="6" onClick="windowAlter('6')"></input></td>
-<td><input type="button" value="*" onClick="windowAlter('*')"></input></td>
-<td><input type="button" value="1/x" onClick="inver()></input></td>
-</tr>
-<tr>
-<td><input type="button" value="1" onClick="windowAlter('1')"></input></td>
-<td><input type="button" value="2" onClick="windowAlter('2')"></input></td>
-<td><input type="button" value="3" onClick="windowAlter('3')"></input></td>
-<td><input type="button" value="-" onClick="windowAlter('-')"></input></td>
-<td><input type="button" value="+" onClick="windowAlter('+')"></input></td>
-</tr>
-<tr>
-<td colspan="3"><input type="button" value="0" onClick="windowAlter('0')"></input></td>
-<td><input type="button" value="." onClick="windowAlter('.')"></input></td>
-<td colspan="2"><input type="button" value="=" onClick="document.Calc.TextWindow.value = eval(Calc.TextWindow.value)"></input></td>
-</tr>
+	<tr>
+		<td colspan = "5"><input type="s" name="TextWindow"></input></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" value="MC" onClick="memClear()"></input></td>
+		<td><input type="button" value="MR" onClick="recall()"></input></td>
+		<td><input type="button" value="MS" onClick="save()"></input></td>
+		<td><input type="button" value="M+" onClick="memAdd()"></input></td>
+		<td><input type="button" value="M-" onClick="memSub()"></input></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" value="BACK"></input></td>
+		<td><input type="button" value="CE"></input></td>
+		<td><input type="button" value="C" onClick="document.Calc.TextWindow.value =''"></input></td>
+		<td><input type="button" value="+/-"></input></td>
+		<td><input type="button" value="sqrt" onClick="sqrt()"></input></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" value="7" onClick="windowAlter('7')"></input></td>
+		<td><input type="button" value="8" onClick="windowAlter('8')"></input></td>
+		<td><input type="button" value="9" onClick="windowAlter('9')"></input></td>
+		<td><input type="button" value="/" onClick="windowAlter('/')"></input></td>
+		<td><input type="button" value="%" onClick="mod()"></input></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" value="4" onClick="windowAlter('4')"></input></td>
+		<td><input type="button" value="5" onClick="windowAlter('5')"></input></td>
+		<td><input type="button" value="6" onClick="windowAlter('6')"></input></td>
+		<td><input type="button" value="*" onClick="windowAlter('*')"></input></td>
+		<td><input type="button" value="1/x" onClick="inver()"></input></td>
+	</tr>
+	
+	<tr>
+		<td><input type="button" value="1" onClick="windowAlter('1')"></input></td>
+		<td><input type="button" value="2" onClick="windowAlter('2')"></input></td>
+		<td><input type="button" value="3" onClick="windowAlter('3')"></input></td>
+		<td><input type="button" value="-" onClick="windowAlter('-')"></input></td>
+		<td><input type="button" value="+" onClick="windowAlter('+')"></input></td>
+	</tr>
+	
+	<tr>
+		<td colspan="3"><input type="button" value="0" onClick="windowAlter('0')"></input></td>
+		<td><input type="button" value="." onClick="windowAlter('.')"></input></td>
+		<td colspan="2"><input type="button" value="=" onClick="document.Calc.TextWindow.value = eval(Calc.TextWindow.value)"></input></td>
+	</tr>
 
 </table>
 </form>
+
+<p id="Memory"></p>
 
 <script src="calc.js"></script>
 

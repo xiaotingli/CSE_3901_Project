@@ -5,27 +5,32 @@ var memoryVal;
 function save()
 {
 	memoryVal = eval(document.Calc.TextWindow.value);	
+	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
 function recall()
 {
-	document.Calc.TextWindow.value = memoryValue;
+	document.Calc.TextWindow.value = eval(memoryVal);
+	
 }
 
-function clear()
+function memClear()
 {
-	memoryVal = 0;
+	memoryVal = '0';
+	document.getElementById("Memory").innerHTML=(memoryVal);
 	
 }
 
 function memAdd()
 {
-	document.Calc.TextWindow.value = eval(document.Calc.TextWindow.value) + memoryVal;
+	memoryVal = eval(document.Calc.TextWindow.value) + memoryVal;
+	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
 function memSub()
 {
-	document.Calc.TextWindow.value = eval(document.Calc.TextWindow.value) - memoryVal;
+	memoryVal = memoryVal - eval(document.Calc.TextWindow.value);
+	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
 function windowAlter(val)
