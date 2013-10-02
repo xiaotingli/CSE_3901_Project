@@ -38,15 +38,15 @@
 		<td><input type="button" value="7" onClick="windowAlter('7')"></input></td>
 		<td><input type="button" value="8" onClick="windowAlter('8')"></input></td>
 		<td><input type="button" value="9" onClick="windowAlter('9')"></input></td>
-		<td><input type="button" value="/" onClick="windowAlter('/')"></input></td>
-		<td><input type="button" value="%" onClick="mod()"></input></td>
+		<td><input type="button" value="/" onClick="arithmetic('/')"></input></td>
+		<td><input type="button" value="%" onClick="arithmetic('%')"></input></td>
 	</tr>
 	
 	<tr>
 		<td><input type="button" value="4" onClick="windowAlter('4')"></input></td>
 		<td><input type="button" value="5" onClick="windowAlter('5')"></input></td>
 		<td><input type="button" value="6" onClick="windowAlter('6')"></input></td>
-		<td><input type="button" value="*" onClick="windowAlter('*')"></input></td>
+		<td><input type="button" value="*" onClick="arithmetic('*')"></input></td>
 		<td><input type="button" value="1/x" onClick="inver()"></input></td>
 	</tr>
 	
@@ -54,14 +54,14 @@
 		<td><input type="button" value="1" onClick="windowAlter('1')"></input></td>
 		<td><input type="button" value="2" onClick="windowAlter('2')"></input></td>
 		<td><input type="button" value="3" onClick="windowAlter('3')"></input></td>
-		<td><input type="button" value="-" onClick="windowAlter('-')"></input></td>
-		<td><input type="button" value="+" onClick="windowAlter('+')"></input></td>
+		<td><input type="button" value="-" onClick="arithmetic('-')"></input></td>
+		<td><input type="button" value="+" onClick="arithmetic('+')"></input></td>
 	</tr>
 	
 	<tr>
 		<td colspan="3"><input type="button" value="0" onClick="windowAlter('0')"></input></td>
 		<td><input type="button" value="." onClick="windowAlter('.')"></input></td>
-		<td colspan="2"><input type="button" value="=" onClick="document.Calc.TextWindow.value = eval(Calc.TextWindow.value)"></input></td>
+		<td colspan="2"><input type="button" value="=" onClick="equals()"></input></td>
 	</tr>
 
 </table>

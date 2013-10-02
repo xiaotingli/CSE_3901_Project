@@ -54,25 +54,41 @@ function windowAlter(val)
 	if(currentEntry)
 	{
 		entry1 += val;
+		val = entry1
 	}
 	else
 	{
 		entry2 += val;
+		val = entry2
 	}
 	
-	document.Calc.TextWindow.value +=val;
+	document.Calc.TextWindow.value = val;
 }
 
 function arithmetic(val)
 {
+	var result;
 	if(val === '/')
-	{}
+	{
+		result = entry1 / entry2;
+	}
 	if(val === '*')
-	{}
+	{
+		result = entry1 * entry2;
+	}
 	if(val === '-')
-	{}
+	{
+		result = entry1 - entry2;
+	}
 	if(val === '+')
-	{}
+	{
+		result = entry1 + entry2;
+	}
+	if(val === '%')
+	{
+		result = entry1 % entry2;
+	}
+	
 	
 	document.Calc.TextWindow.Value = result
 }
@@ -81,10 +97,18 @@ function del()
 {
 	var txtlength = String(document.Calc.TextWindow.value.length)
 	document.Calc.TextWindow.value = document.Calc.TextWindow.value.substring(0, (txtlength-1));
+	if(currentEntry)
+	{
+		entry1 = document.Calc.TextWindow.value;
+	}
+	else{
+		entry2 = document.Calc.TextWindow.value;
+	}
 }
 
 function sqrt()
 {
+	
 	document.Calc.TextWindow.value = Math.sqrt(Number(eval(document.Calc.TextWindow.value)));
 	
 }
@@ -94,14 +118,13 @@ function inver()
 	document.Calc.TextWindow.value = 1 / (eval(document.Calc.TextWindow.value));
 }
 
-function mod()
-{
-	document.Calc.TextWindow.value = (eval(document.Calc.TextWindow.value));	
-}
-
 function neg()
 {
 	
 	document.Calc.TextWindow.value = -1 * (eval(document.Calc.TextWindow.value));
 }
 
+function equals()
+{
+	
+}
