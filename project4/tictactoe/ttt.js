@@ -47,12 +47,12 @@ while (gameOver === false) {
   // output which player's turn it is
   turn.innerHTML = 'Player ' + playerTurn + ', it is your turn.';
   
-  if (player === 0) {
+  if (playerTurn === 0) {
     // make computer's move
 	turn.innerHTML = 'The Computer is thinking.';
 	setTimeout(computerTurn(), 2000);
 	
-  } else if (player === 1) {
+  } else if (playerTurn === 1) {
     // wait for user's move
 	// We might want to implement somthing like this. http://stackoverflow.com/questions/2221836/how-can-i-make-a-program-wait-for-a-button-press-in-javascript
 	// Or we just have the screen run based on when a user presses a button it reacts
