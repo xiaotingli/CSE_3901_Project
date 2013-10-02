@@ -1,29 +1,45 @@
 
 var memoryVal;
-
+var entry1;
+var entry2;
+var currentEntry = true;
+var inFunction = false;
+//True = entry1 needs entered
+//false = entry2 needs entered
 
 function save()
 {
-	memoryVal = eval(document.Calc.TextWindow.value);	
+	memoryVal = document.Calc.TextWindow.value;	
 	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
 function recall()
 {
-	document.Calc.TextWindow.value = eval(memoryVal);
+	if(currentEntry_
+	{
+		entry1 = memoryVal;
+	}
+	else
+	{
+		entry2 = memoryVal;
+	}
 	
+	if(currentEntry)
+	{
+		document.Calc.TextWindow.value = memoryVal;
+	}
 }
 
 function memClear()
 {
-	memoryVal = '0';
+	memoryVal = '';
 	document.getElementById("Memory").innerHTML=(memoryVal);
 	
 }
 
 function memAdd()
 {
-	memoryVal = eval(document.Calc.TextWindow.value) + memoryVal;
+	memoryVal = document.Calc.TextWindow.value + memoryVal;
 	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
@@ -35,7 +51,30 @@ function memSub()
 
 function windowAlter(val)
 {
+	if(currentEntry)
+	{
+		entry1 += val;
+	}
+	else
+	{
+		entry2 += val;
+	}
+	
 	document.Calc.TextWindow.value +=val;
+}
+
+function arithmetic(val)
+{
+	if(val === '/')
+	{}
+	if(val === '*')
+	{}
+	if(val === '-')
+	{}
+	if(val === '+')
+	{}
+	
+	document.Calc.TextWindow.Value = result
 }
 
 function del()
@@ -62,6 +101,7 @@ function mod()
 
 function neg()
 {
+	
 	document.Calc.TextWindow.value = -1 * (eval(document.Calc.TextWindow.value));
 }
 
