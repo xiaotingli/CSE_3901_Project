@@ -4,6 +4,7 @@ var entry1 = '';
 var entry2 = '';
 var currentEntry = true;
 var inFunction = false;
+var currentMath = '' 
 //True = entry1 needs entered
 //false = entry2 needs entered
 
@@ -66,31 +67,29 @@ function windowAlter(val)
 
 function arithmetic(val)
 {
-	var result;
 	currentEntry = false;
 	if(val === '/')
 	{
-		result = entry1 / entry2;
+		currentMath = '/'
 	}
 	if(val === '*')
 	{
-		result = entry1 * entry2;
+		currentMath = '*'
 	}
 	if(val === '-')
 	{
-		result = entry1 - entry2;
+		currentMath = '-'
 	}
 	if(val === '+')
 	{
-		result = entry1 + entry2;
+		currentMath = '+'
 	}
 	if(val === '%')
 	{
-		result = entry1 % entry2;
+		currentMath = '%'
 	}
 	
-	
-	document.Calc.TextWindow.Value = result
+	document.Calc.TextWindow.Value = '';
 }
 
 function del()
@@ -110,7 +109,12 @@ function sqrt()
 {
 	
 	document.Calc.TextWindow.value = Math.sqrt(Number(eval(document.Calc.TextWindow.value)));
-	
+	if(currentEntry){
+		entry1 = document.Calc.TextWindow.value;
+		}
+	else{	
+			entry2 = document.Calc.TextWindow.value;
+		}
 }
 
 function inver()
@@ -127,7 +131,7 @@ function neg()
 function equals()
 {
 		var result
-		if(addFunction)
+		if(currentMath === '+')
 		{
 			resutl
 }
