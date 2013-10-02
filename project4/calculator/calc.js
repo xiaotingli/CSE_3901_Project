@@ -4,7 +4,7 @@ var entry1 = '';
 var entry2 = '';
 var currentEntry = true;
 var inFunction = false;
-var currentMath = '' 
+var currentMath = '' ;
 //True = entry1 needs entered
 //false = entry2 needs entered
 
@@ -40,7 +40,7 @@ function memClear()
 
 function memAdd()
 {
-	memoryVal = document.Calc.TextWindow.value + memoryVal;
+	memoryVal = Number(document.Calc.TextWindow.value) + Number(memoryVal);
 	document.getElementById("Memory").innerHTML=(memoryVal);
 }
 
@@ -133,5 +133,11 @@ function equals()
 		var result
 		if(currentMath === '+')
 		{
-			resutl
+			result = entry1 + entry2
+			entry1 = result;
+			entry2 = '';
+			document.Calc.TextWindow.value = entry1;
+			currentmath = '';
+			entry1 = true;
+		}
 }
