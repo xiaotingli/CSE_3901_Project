@@ -1,7 +1,7 @@
 
-var memoryVal;
-var entry1;
-var entry2;
+var memoryVal = '';
+var entry1 = '';
+var entry2 = '';
 var currentEntry = true;
 var inFunction = false;
 //True = entry1 needs entered
@@ -15,7 +15,7 @@ function save()
 
 function recall()
 {
-	if(currentEntry_
+	if(currentEntry)
 	{
 		entry1 = memoryVal;
 	}
@@ -54,12 +54,11 @@ function windowAlter(val)
 	if(currentEntry)
 	{
 		entry1 += val;
-		val = entry1
+		val = entry1;
 	}
-	else
-	{
+	else{
 		entry2 += val;
-		val = entry2
+		val = entry2;
 	}
 	
 	document.Calc.TextWindow.value = val;
@@ -68,6 +67,7 @@ function windowAlter(val)
 function arithmetic(val)
 {
 	var result;
+	currentEntry = false;
 	if(val === '/')
 	{
 		result = entry1 / entry2;
@@ -126,5 +126,8 @@ function neg()
 
 function equals()
 {
-	
+		var result
+		if(addFunction)
+		{
+			resutl
 }
