@@ -1,4 +1,3 @@
-
 var memoryVal = '';
 var entry1 = '';
 var entry2 = '';
@@ -133,11 +132,43 @@ function equals()
 		var result
 		if(currentMath === '+')
 		{
-			result = entry1 + entry2
+			result = Number(entry1) + Number(entry2)
 			entry1 = result;
 			entry2 = '';
 			document.Calc.TextWindow.value = entry1;
-			currentmath = '';
-			entry1 = true;
+			currentMath = '';
+			currentEntry = true;
+		}
+		if(currentMath === '-'){
+		
+			result = Number(entry1) - Number(entry2)
+			document.Calc.TextWindow.value = result
+			entry2 = ''
+			currentMath = ''
+			currentEntry = true;			
+		}
+		if(currentMath === '*'){
+		
+			result = Number(entry1) * Number(entry2)
+			document.Calc.TextWindow.value = result
+			entry2 = ''
+			currentMath = ''
+			currentEntry = true;			
+		}
+		if(currentMath === '/'){
+		
+			result = Number(entry1) / Number(entry2)
+			document.Calc.TextWindow.value = result
+			entry2 = ''
+			currentMath = ''
+			currentEntry = true;			
+		}
+		if(currentMath === '%'){
+		
+			result = Number(entry1) % Number(entry2)
+			document.Calc.TextWindow.value = result
+			entry2 = ''
+			currentMath = ''
+			currentEntry = true;			
 		}
 }
