@@ -17,16 +17,20 @@ function updateBoard(node, player) {
 function userTurn(node) {
 	playerTurn = 1;
 	updateBoard(node, playerTurn);
-	checkWin();
+	turn.innerHTML = 'The Computer is Thinking';
+	setTimeout(function(){computerTurn()}, 2000);
 	}
 
 function computerTurn()
 {
+	playerTurn = 0;
+	var compNode = 'b11';
+	updateBoard(b11, playerTurn);
 }
 
 function checkWin()
 {
-	if(b00.style.backgroundColor === b01.style.backgroundColor === b02.style.backgroundColor === 'red')
+	if(document.b00.style.backgroundColor === document.b01.style.backgroundColor === document.b02.style.backgroundColor === 'red')
 		{
 		turn.InnerHTML = 'PLAYER WINS!'
 		}
@@ -41,15 +45,18 @@ while (gameOver === false) {
   playerTurn = (playerTurn + 1) % 2;
 
   // output which player's turn it is
-  turn.innerHTML = 'Player ' + player + ', it is your turn.';
+  turn.innerHTML = 'Player ' + playerTurn + ', it is your turn.';
   
   if (player === 0) {
     // make computer's move
 	turn.innerHTML = 'The Computer is thinking.';
-	setTimeout(computerTurn(), 2);
+	setTimeout(computerTurn(), 2000);
 	
   } else if (player === 1) {
     // wait for user's move
+	// We might want to implement somthing like this. http://stackoverflow.com/questions/2221836/how-can-i-make-a-program-wait-for-a-button-press-in-javascript
+	// Or we just have the screen run based on when a user presses a button it reacts
+	// rather than having a main function.  but idk
     userTurn();
   }
 
